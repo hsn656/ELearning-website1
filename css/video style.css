@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    cursor: default
+}
+
+.video-container {
+    width: 100% !important;
+    /* margin: auto; */
+}
+
+.videos {
+    background-color: #000;
+    height: 500px;
+}
+
+.video-control {
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    text-align: center;
+    direction: ltr !important;
+}
+
+.video-control span {
+    color: #fff;
+    font-size: 20px;
+}
+
+.video-control i {
+    cursor: pointer;
+}
+
+.settings-box {
+    position: relative;
+}
+
+.settings {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 65px;
+    display: inline-block;
+    width: 150px;
+    left: -130px;
+    top: -60px;
+    transition: all .5s;
+    cursor: pointer;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.settings.hide {
+    display: none;
+}
+
+#progressBar {
+    width: 70%;
+    background-color: #d3d3d3;
+    outline: none;
+    height: 13px;
+    cursor: pointer;
+}
+
+.full-screen {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%;
+}
+
+.full-screen-controls {
+    position: fixed;
+    z-index: 111;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    text-align: center;
+}
+
+.full-screen-controls #progressBar {
+    width: 85%;
+    cursor: pointer;
+}

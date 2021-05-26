@@ -1,0 +1,421 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    /* height: 5000px; */
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.display{
+    display: flex;
+}
+.margin{
+    margin-top: 90px;
+}
+.space-between-sections{
+    height: 150px;
+}
+a{
+    text-decoration: none;
+}
+button , input{
+    font-family: inherit;
+}
+
+/* ////////////////////////////////////////////////////// */
+.header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    line-height: 80px;
+    z-index: 2;
+}
+.header.color{
+    background: #eeefff;
+    box-shadow: 1px 1px 1px #eeee;
+
+}
+.background{
+    background:#fff;
+    box-shadow: 1px 2px 3px #eeee;
+}
+.logo{
+    width: 20%;
+}
+.logo img{
+    width: 60%;
+    height: 60%;
+    margin-top: 10px;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+.nav a {
+    color: #555;
+    padding: 5px;
+    transition: all .6s;
+}
+.signin-signup{
+    width: 45%;
+    direction: ltr;
+}
+#signin , #signup{
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+#signin{
+    border: 1px solid #555;
+    color: #555;
+    background: transparent;
+}
+#signup{
+    border: 0;
+    margin-left: 5px;
+    background: #00adb5;
+    color: #fff;
+}
+#signin:hover , #signup:hover{
+    background:#132c33 ;
+    color: #fff;
+}
+
+.signout {
+    width: 45%;
+    direction: ltr;
+}
+
+#signout {
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.signout img {
+    width: 8%;
+    height: 30%;
+    margin-left: 10px;
+}
+
+.signout #profileEmail {
+    color: #00adb5;
+    font-weight: bold;
+}
+
+#signout {
+    border: 1px solid #555;
+    color: #555;
+}
+
+#signout:hover {
+    background: #132c33;
+    color: #fff;
+}
+
+ul.nav li a:hover{
+    color:#00adb5 ;
+}
+/*  THE END OF HEADER STYLING*/
+/**************************************************/
+/* pre Loader*/
+.afterloader{
+    display: none;
+}
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px;
+    border: 5px solid transparent;
+    border-left:5px solid #00adb5;
+    animation: spinner 1.5s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/*  THE END OF HEADER STYLING*/
+
+
+/**************************************************/
+
+.lesson-body {
+    width: 100%;
+    display: flex;
+}
+
+.lesson-section {
+    /* display: flex; */
+    /* height: 1000px; */
+    width: 75%;
+    margin: 40px ;
+}
+
+.lesson-video {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin: auto;
+}
+
+
+/*********************************************/
+
+.lessons-list {
+    width: 25%;
+    border: 1px solid #ccc;
+    margin: 50px 5px 5px 0;
+    height: max-content;
+}
+
+.lesson-list-header {
+    width: 100%;
+    box-shadow: .5px .5px 5px #ccc;
+    padding: 20px 0;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-list-header h3 {
+    color: #555;
+    margin: 5px;
+}
+
+.lesson-list-header i {
+    cursor: pointer;
+    font-size: 22px;
+    color: #555;
+    padding: 5px;
+    margin: 5px;
+}
+
+.show-lessons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    border: 1px solid #dedfe0;
+    background-color: #f7f8fa;
+}
+
+.show-lessons-Btn {
+    width: 90%;
+    height: 100%;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-align: right;
+    padding: 5px;
+    margin-right: 5px;
+    color: #3c3b37;
+}
+
+#lessons-down-angle {
+    width: 9.5%;
+    font-size: 26px;
+    color: #3c3b37;
+    cursor: pointer;
+}
+
+.show-lessons:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.lesson-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-desc span {
+    padding: 5px;
+    font-size: 18px;
+    color: #14171c;
+}
+
+.lesson-chekbox {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.lesson-chekbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    box-shadow: .5px .5px 2px #ccc;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.lesson-chekbox:hover input~.custom-checkbox {
+    background-color: #fff;
+    border-color: #00adb5;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.lesson-chekbox input:checked~.custom-checkbox {
+    background-color: #00adb5;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.lesson-chekbox input:checked~.custom-checkbox:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.lesson-chekbox .custom-checkbox:after {
+    left: 6px;
+    top: 1.5px;
+    width: 3.5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/**********************************************************************/
+
+.overiw-comments-list {
+    list-style: none;
+    display: flex;
+    /* justify-content: space-around; */
+    direction: ltr;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    margin: 10px auto;
+    align-items: center;
+    height: 60px;
+}
+
+.overiw-comments-list li {
+    margin-left: 30px;
+    margin-top: 27px;
+    font-weight: 500;
+    color: #555;
+}
+
+.overiw-comments-list li::after {
+    content: "";
+    height: 2px;
+    width: 70px;
+    background: #3c3b37;
+    margin-top: 14px;
+    display: none;
+}
+
+.overiw-comments-list li:hover::after {
+    display: block;
+}
+
+.overiw-comments-list li:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+
+/*******************************************************************/
+
+.overview {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    display: inline-block;
+    color: white;
+}
+.footer ul h3{
+    margin-top: 20px;
+}
+.footer p {
+    color: white;
+}
+

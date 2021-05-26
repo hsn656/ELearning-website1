@@ -1,0 +1,361 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    /* height: 5000px; */
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.display{
+    display: flex;
+}
+.margin{
+    margin-top: 90px;
+}
+.space-between-sections{
+    height: 150px;
+}
+a{
+    text-decoration: none;
+}
+button , input{
+    font-family: inherit;
+}
+/********************************************/
+.header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    line-height: 80px;
+    z-index: 2;
+}
+.header.color{
+    background: #eeefff;
+    box-shadow: 1px 1px 1px #eeee;
+
+}
+.background{
+    background:#fff;
+    box-shadow: 1px 2px 3px #eeee;
+}
+.logo{
+    width: 20%;
+}
+.logo img{
+    width: 60%;
+    height: 60%;
+    margin-top: 10px;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+.nav a {
+    color: #555;
+    padding: 5px;
+    transition: all .6s;
+}
+.signin-signup{
+    width: 45%;
+    direction: ltr;
+}
+#signin , #signup{
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+#signin{
+    border: 1px solid #555;
+    color: #555;
+    background: transparent;
+}
+#signup{
+    border: 0;
+    margin-left: 5px;
+    background: #00adb5;
+    color: #fff;
+}
+#signin:hover , #signup:hover{
+    background:#132c33 ;
+    color: #fff;
+}
+
+.signout {
+    width: 45%;
+    direction: ltr;
+}
+
+#signout {
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.signout img {
+    width: 8%;
+    height: 30%;
+    margin-left: 10px;
+}
+
+.signout #profileEmail {
+    color: #00adb5;
+    font-weight: bold;
+}
+
+#signout {
+    border: 1px solid #555;
+    color: #555;
+}
+
+#signout:hover {
+    background: #132c33;
+    color: #fff;
+}
+
+ul.nav li a:hover{
+    color:#00adb5 ;
+}
+/*  THE END OF HEADER STYLING*/
+/**************************************************/
+.course-overview{
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    padding: 20px 20px 0;
+    background: #555;
+}
+.detial{
+    width: 50%;
+    padding-top: 40px;
+}
+.detial *{
+    color: #fff;
+}
+.course-name{
+    font-weight: 500;
+    font-size: 24px;
+}
+.course-brief{
+    width: 95%;
+    margin: 20px 5px;
+}
+#rate-number{
+    display: inline-block;
+    margin-left: 5px;
+}
+.rating-stars{
+    list-style: none;
+    display: inline-block;
+}
+.rating-stars li  {
+    display: inline-block;
+}
+.rating{
+    margin-bottom: 20px;
+}
+.attend{
+    margin-bottom: 20px;
+}
+.buttons button{
+    outline: 0;
+    border: 2px solid #fff;
+    letter-spacing: 1.7px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+#share{
+    margin-left: 5px;
+}
+/******************/
+.pic-desc{
+    width:27%;
+    height: 80%;
+    text-align: center;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 1px 1px 2px #ccc;
+    margin: auto 0;
+}
+.course-img{
+    height: 60%;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #bbb;
+}
+.course-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.price-duration *{
+    margin-bottom: 10px;
+    text-align: center;
+    padding-right: 10px;
+    direction: ltr;
+
+    color: #444;
+}
+#addToCart{
+    width: 85%;
+    padding: 12px 0;
+    outline: 0;
+    border-radius: 5px;
+    border: 0;
+    background: #00adb5;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+}
+/***********************************************************/
+/* course description*/
+.desc{
+    padding:30px;
+}
+.desc h3{
+    font-size: 22px;
+    font-weight: 500px;
+    color: #444;
+}
+.desc p{
+    width: 60%;
+    margin-top: 20px;
+    color: #666;
+}
+.desc a{
+    margin-top: 15px;
+    color: #00adb5;
+    display: inline-block;
+}
+/********************************************************************/
+ /* pre Loader*/
+ .afterloader{
+    display: none;
+}
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px;
+    border: 5px solid transparent;
+    border-left:5px solid #00adb5;
+    animation: spinner 1.5s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* scroll to up */
+#goUp {
+    font-size: 30px;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: none;
+}
+#goUp img{
+    width: 100%;
+    height: 100%;
+}
+#goUp:hover{
+    background-color: #fff;
+    box-shadow: .5px .5px 9px #555;
+    border: none;
+}
+/********************************************************************/
+/*course-lessons*/
+.course-lessons{
+    padding: 20px;
+}
+.course-lessons h2{
+    margin-bottom: 20px;
+    color: #444;
+}
+.lessons{
+    border: 1px solid #bbb;
+    border-radius:5px ;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.accordion{
+    padding: 20px 10px;
+    width: 100%;
+    text-align: right;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #bbb;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+}
+.panel{
+    display: none;
+    padding: 20px;
+}
+/*****************************************************************/
+.course-comments{
+    padding: 20px;
+
+}
+.course-comments h2 {
+    color: #444;
+    margin-bottom: 20px;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    display: inline-block;
+    color: white;
+}
+.footer ul h3{
+    margin-top: 20px;
+}
+.footer p {
+    color: white;
+}

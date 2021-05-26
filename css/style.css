@@ -1,0 +1,53 @@
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/النحو.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.register {
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(248, 245, 245, 0.6);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    height: auto;
+    top: 45px;
+}
+
+.form input {
+    outline: 1;
+    background-color: #f2f2f2;
+    border: 0;
+    margin: 0 auto 15px;
+    padding: 15px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+.form .create {
+    outline: 0;
+    border: 0;
+    background: rgb(255, 136, 0);
+    width: 75%;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

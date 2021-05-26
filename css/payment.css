@@ -1,0 +1,310 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background-color: #FAFBFC;
+    /* height: 5000px; */
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.display{
+    display: flex;
+}
+.margin{
+    margin-top: 90px;
+}
+.space-between-sections{
+    height: 150px;
+}
+a{
+    text-decoration: none;
+}
+/*****************************************************************************************/
+.header{
+    width: 100%;
+    height: 85px;
+    /* position: fixed; */
+    line-height: 80px;
+}
+.header.color{
+    background: #eeefff;
+    box-shadow: 1px 1px 1px #eeee;
+
+}
+.background{
+    background:#fff;
+    box-shadow: 1px 2px 3px #eeee;
+}
+.logo{
+    width: 20%;
+}
+.logo img{
+    width: 60%;
+    height: 60%;
+    margin-top: 10px;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+.nav a {
+    color: #555;
+    padding: 5px;
+    transition: all .6s;
+}
+.signin-signup{
+    width: 45%;
+    direction: ltr;
+}
+#signin , #signup{
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+}
+#signin{
+    border: 1px solid #555;
+    color: #555;
+    background: transparent;
+}
+#signup{
+    border: 0;
+    margin-left: 5px;
+    background: #00adb5;
+    color: #fff;
+}
+#signin:hover , #signup:hover{
+    background:#132c33 ;
+    color: #fff;
+}
+
+
+.signout {
+    width: 45%;
+    direction: ltr;
+}
+
+#signout {
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.signout img {
+    width: 8%;
+    height: 30%;
+    margin-left: 10px;
+}
+
+.signout #profileEmail {
+    color: #00adb5;
+    font-weight: bold;
+}
+
+#signout {
+    border: 1px solid #555;
+    color: #555;
+}
+
+#signout:hover {
+    background: #132c33;
+    color: #fff;
+}
+
+ul.nav li a:hover{
+    color:#00adb5 ;
+}
+/*  THE END OF HEADER STYLING*/
+
+.subscription {
+    flex-grow: 1;
+    width: 50%;
+    margin: 1em 1em;
+    border: 3px solid;
+    border-radius: 29px;
+    box-shadow: 8px 16px #e1dbdb;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+  h1{
+    margin: .5em;
+  }
+  p{
+    margin: .25em;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  #list>li:before {
+    content: "✔️";
+    display: inline-block;
+    margin-left: .5em;
+    width: 1.3em;
+  }
+
+  .fit {
+    width: 50%;
+    margin: auto;
+  }
+  .button{
+    width: 25%;
+    margin: 1em auto;
+  }
+  #subButton{
+    width: 130px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 7px;
+    background-color: #e1e1a5;
+    font-weight: bold;
+    transition: background-color 1s;
+    cursor: pointer;
+
+  }
+  #subButton:hover{
+    background-color: #8f8153;
+  }
+
+
+  /* pre Loader*/
+.afterloader{
+    display: none;
+}
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px;
+    border: 5px solid transparent;
+    border-left:5px solid #00adb5;
+    animation: spinner 1.5s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* scroll to up */
+#goUp {
+    font-size: 30px;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: none;
+}
+#goUp img{
+    width: 100%;
+    height: 100%;
+}
+#goUp:hover{
+    background-color: #fff;
+    box-shadow: .5px .5px 9px #555;
+    border: none;
+}
+/*END OF TRENDING COURSES*/
+/****************************************************************/
+
+/*footer*/
+.footer{
+    /* width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: #333333;
+    color: white; */
+
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:115px;   
+   background-color: #333333;
+   color: white;
+   text-align: center;
+
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    display: inline-block;
+    color: white;
+}
+.footer ul h3{
+    margin-top: 20px;
+}
+.footer p {
+    color: white;
+}
+
+/****************************************************************/
+
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 

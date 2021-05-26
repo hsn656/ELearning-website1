@@ -1,0 +1,569 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    direction: rtl;
+    height: 2000px;
+}
+.container{
+    width: 70%;
+    margin: auto;
+} */
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    /* height: 5000px; */
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.display{
+    display: flex;
+}
+.margin{
+    margin-top: 90px;
+}
+.space-between-sections{
+    height: 150px;
+}
+a{
+    text-decoration: none;
+}
+button , input{
+    font-family: inherit;
+}
+
+/* ////////////////////////////////////////////////////// */
+.header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    line-height: 80px;
+    z-index: 2;
+}
+.header.color{
+    background: #eeefff;
+    box-shadow: 1px 1px 1px #eeee;
+
+}
+.background{
+    background:#fff;
+    box-shadow: 1px 2px 3px #eeee;
+}
+.logo{
+    width: 20%;
+}
+.logo img{
+    width: 60%;
+    height: 60%;
+    margin-top: 10px;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+.nav a {
+    color: #555;
+    padding: 5px;
+    transition: all .6s;
+}
+.signin-signup{
+    width: 45%;
+    direction: ltr;
+}
+#signin , #signup{
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+#signin{
+    border: 1px solid #555;
+    color: #555;
+    background: transparent;
+}
+#signup{
+    border: 0;
+    margin-left: 5px;
+    background: #00adb5;
+    color: #fff;
+}
+#signin:hover , #signup:hover{
+    background:#132c33 ;
+    color: #fff;
+}
+
+.signout {
+    width: 45%;
+    direction: ltr;
+}
+
+#signout {
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.signout img {
+    width: 8%;
+    height: 30%;
+    margin-left: 10px;
+}
+
+.signout #profileEmail {
+    color: #00adb5;
+    font-weight: bold;
+}
+
+#signout {
+    border: 1px solid #555;
+    color: #555;
+}
+
+#signout:hover {
+    background: #132c33;
+    color: #fff;
+}
+
+ul.nav li a:hover{
+    color:#00adb5 ;
+}
+/*  THE END OF HEADER STYLING*/
+/**************************************************/
+/* pre Loader*/
+.afterloader{
+    display: none;
+}
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px;
+    border: 5px solid transparent;
+    border-left:5px solid #00adb5;
+    animation: spinner 1.5s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    height: 810px;
+    padding-top: 5em;
+}
+.profile-bar{
+    width: 25%;
+    padding: 10px;
+    height: 100%;
+    border-left: 1px solid #ccc;
+}
+.profile-bar #img{
+    width: 70%;
+    height: 22%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-bar #img #profile-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-bar #profile-name h3{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.profile-bar ul {
+    list-style: none;
+    line-height: 2.2;
+    width: 100%;
+}
+.profile-bar ul li {
+    font-size: 18px;
+    text-decoration: none;
+    color: #555;
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+/***************/
+.profile-bar ul li:hover{
+    background-color: #8a92a3;
+    color: #fff;
+    cursor: pointer;
+}
+.active {
+    color: #fff;
+    background-color: #8a92a3;
+}
+
+/* END OF BAR*/
+/***************************************************************************/
+
+/* save button style*/
+
+.save{
+    margin: auto;
+    background-color: #51c4d3;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/***************************************************************************/
+/* profile Style*/
+/* الملف الشخصى */
+.profile-info-edit{
+    width: 75%;
+    height: 100%;
+}
+.profile-basic{
+    width: 100%;
+    /* display: none; */
+}
+.profile-basic-header{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.profile-basic-header h2{
+    color: #555;
+    margin-bottom: 5px;
+}
+/*****************************/
+.profile-basic-info{
+    padding: 0px 50px;
+    border-bottom: 1px solid #ccc;
+
+}
+.profile-basic-info span{
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1.7;
+    font-size: 18px;
+    color: #333;
+}
+.profile-basic-info div{
+    width: 90%;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.profile-basic-info div input,
+.profile-basic-info div textarea{
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    outline: 0;
+    color: #29303b;
+}
+/*********************************************/
+.profile-basic-links{
+    padding: 0px 50px;
+    /* border-bottom: 1px solid #ccc; */
+}
+.profile-basic-links >span{
+    /* margin-bottom: 10px; */
+    display: block;
+    letter-spacing: 1.2px;
+    font-size: 18px;
+    color: #333;
+}
+.profile-basic-links div{
+    width: 90%;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    
+}
+.profile-basic-links div span{
+    display: inline-block;
+    background-color: #f2f3f5;
+    padding:  12px;
+    border-left: 1px solid #ccc;
+    width: 30%;
+    color: #29303b;
+    text-align: left;
+    direction: ltr;
+}
+.profile-basic-links div input{
+    padding:  10px;
+    border: none;
+    width: 69%;
+    display: inline-block;
+    outline: 0;
+
+}
+/***********************************************/
+.button{
+    width: 100%;
+    text-align: center;
+    /* padding: 20px; */
+    position: relative;
+top: -1.5em;
+}
+
+/*END OF PROFILE*/
+/************************************************************************************************/
+
+/* Photo Edit style */
+/* (الصورة الشخصية)*/
+.edit-photo{
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+.edit-photo-header{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.edit-photo-header h2{
+    color: #555;
+    margin-bottom: 5px;
+}
+/************************************/
+.image-preview{
+    padding: 20px 50px;
+    margin-top: 50px;
+}
+.image-preview span,
+.chose-image span{
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1.7;
+    font-size: 18px;
+    color: #333;
+    width: 45%;
+    text-align: right;
+}
+.preview{
+    border: 1px solid #ccc;
+    width: 95%;
+    height: 300px;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 0 0 0 1.5px #eee inset;
+}
+.img-upload,
+.img-anonymous{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img-upload img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-anonymous img{
+    width: 50%;
+    height: 100%;
+   display: block;
+   margin: auto;
+}
+.img-anonymous{
+    border: #8a92a3;
+    background-color: #eee;
+}
+
+/**********************/
+.chose-image{
+    padding: 20px 50px;
+}
+
+.chose-image-btn{
+    width: 95%;
+    height: 50px;
+    border: 1px solid #ccc;
+    background-color: #f2f3f5;
+}
+.chose-image-btn input,
+.chose-image-btn button{
+    outline: 0;
+    height: 100%;
+    font-size: 18px;
+    cursor: pointer;
+}
+.chose-image-btn input{
+    width: 70%;
+    padding-right: 10px;
+    background-color: #f2f3f5;
+    border: 0;
+}
+.chose-image-btn button{
+    width: 29.2%;
+    border:1px solid #51c4d3;
+    color: #51c4d3;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+#save-photo{
+    margin-top: 30px;
+}
+
+/* END OF PHOTO EDIT*/
+/******************************************************************************/
+/***************************************************************************/
+/*Account*/
+/* الحساب */
+.account{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.account-header{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.account-header h2{
+    color: #555;
+    margin-bottom: 5px;
+}
+/*****************************/
+.email,
+.password-edit{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 40px;
+}
+.email-edit{
+    width: 90%;
+    height: 50px;
+}
+.email >span,
+.password-edit>span{
+    margin-bottom: 20px;
+    color: #29303b;
+    display: inline-block;
+    padding-right: 10px;
+}
+.email-edit input{
+    height: 100%;
+    width: 90%;
+    border: 1px solid #ccc;
+    outline: 0;
+    padding: 5px;
+    font-size: 18px;
+}
+.email-edit i{
+    width: 9.222%;
+    background-color: #f2f3f5;
+    padding: 15.9px;
+    border: 1px solid #ccc;
+    color: #555;
+    cursor: pointer;
+}
+.password-edit{
+    margin-bottom: 10px;
+}
+.password-edit input{
+    height: 50px;
+    width: 90%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding:5px ;
+    margin-bottom: 30px;
+    outline: 0;
+}
+.password-edit input:focus{
+    border-color: #51c4d3;
+}
+
+
+/* END OF ACCOUNT */
+/**************************************************************************************/
+
+.close-account{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.close-account-header{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.close-account-header h2{
+    color: #555;
+    margin-bottom: 5px;
+}
+/***************************/
+.close-account-body{
+    padding: 50px ;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.close-account-body > span{
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 18px;
+}
+.close-account-body p{
+    margin-bottom: 20px;
+}
+.close-account-body p span{
+    color:#992337 ;
+    font-weight: bold;
+}
+#closeAcount{
+    border: 2px solid #992337;
+    outline: 0;
+    padding: 10px 25px;
+    color: #992337;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+#closeAcount:hover{
+    color: #521822;
+    border-color: #521822;
+    cursor: pointer;
+}

@@ -1,0 +1,396 @@
+/* General */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background-image:url(../images/النحو.jpg);
+    direction: rtl;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.display {
+    display: flex;
+}
+
+.margin {
+    margin-top: 90px;
+}
+
+.space-between-sections {
+    height: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+.layer{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: #000;
+    opacity: .7;
+    z-index: -1;
+} */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background-image:url(../images/public/background.jpg);
+    direction: rtl;
+    position: relative;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.display{
+    display: flex;
+}
+.margin{
+    margin-top: 90px;
+}
+.space-between-sections{
+    height: 150px;
+}
+a{
+    text-decoration: none;
+}
+button , input{
+    font-family: inherit;
+}
+
+.layer{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: #000;
+    opacity: .7;
+    z-index: -1;
+} 
+
+/* Ending of the General */
+
+
+/*  Style of the header Part */
+
+
+/*   393e46   , 00adb5 ,   aad8d3 , eeeeee , ffb4b4 ,  ff9292 ,   ffdcdc*/
+
+.header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    line-height: 80px;
+    z-index: 2;
+}
+.header.color{
+    background: #eeefff;
+    box-shadow: 1px 1px 1px #eeee;
+
+}
+.background{
+    background:#fff;
+    box-shadow: 1px 2px 3px #eeee;
+}
+.logo{
+    width: 20%;
+}
+.logo img{
+    width: 60%;
+    height: 60%;
+    margin-top: 10px;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+.nav a {
+    color: #555;
+    padding: 5px;
+    transition: all .6s;
+}
+.signin-signup{
+    width: 45%;
+    direction: ltr;
+}
+#signin , #signup{
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+#signin{
+    border: 1px solid #555;
+    color: #555;
+    background: transparent;
+}
+#signup{
+    border: 0;
+    margin-left: 5px;
+    background: #00adb5;
+    color: #fff;
+}
+#signin:hover , #signup:hover{
+    background:#132c33 ;
+    color: #fff;
+}
+
+.signout {
+    width: 45%;
+    direction: ltr;
+}
+
+#signout {
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.signout img {
+    width: 8%;
+    height: 30%;
+    margin-left: 10px;
+}
+
+.signout #profileEmail {
+    color: #00adb5;
+    font-weight: bold;
+}
+
+#signout {
+    border: 1px solid #555;
+    color: #555;
+}
+
+#signout:hover {
+    background: #132c33;
+    color: #fff;
+}
+
+ul.nav li a:hover{
+    color:#00adb5 ;
+}
+/*  THE END OF HEADER STYLING*/
+
+
+/**************************************************/
+
+
+/* Form Style */
+
+/* .quiz-area {
+    width: 100%;
+    height: 1600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(../images/النحو.jpg);
+} */
+
+.quiz-container {
+    /* position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 450px; */
+    /* margin-top: 70px; */
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(238, 238, 238);
+    padding: 95px 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-info {
+    margin-bottom: 20px;
+}
+
+.quiz-title,
+.quiz-length,
+.result {
+    text-align: center;
+    padding: 5px;
+}
+
+.result {
+    background-color: #00adb5;
+    max-width: 30%;
+    /* width: 20%; */
+    margin:10px auto;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: x-large;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.result span {
+    color: #ea4335;
+    font-size: xx-large;
+}
+
+#fulldegree {
+    font-size: xx-large;
+    color: white;
+}
+.question-part{
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.question {
+    background-color: #393e46;
+    height: auto;
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.quistion-name {
+    display: inline-block;
+    width: 90%;
+    background-color: #7d8080;
+    padding: 10px 20px ;
+    /* padding-right: 20px; */
+    border-radius: 20px;
+    margin: 0 30px;
+    color: white;
+}
+.quistion-number {
+    /* position: absolute; */
+    width: 50px;
+    height: 40px;
+    background-color: #00adb5;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+    display: inline-block;
+}
+
+/*   393e46   , 00adb5 ,   aad8d3 , eeeeee , ffb4b4 ,  ff9292 ,   ffdcdc*/
+
+.answer {
+    width: 70%;
+    background-color: white;
+    /* margin: 10px 20px; */
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.answer input {
+    cursor: pointer;
+}
+
+.answer label {
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+
+/* 
+input:checked~label {
+    color: #1877f2;
+} */
+
+.button {
+    /* margin: auto; */
+    text-align: center;
+}
+
+.button input {
+    /* height: 70px; */
+    /* width: 20%; */
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: #00adb5;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    /* transition: all .6s ease; */
+}
+
+.button input:hover {
+    background: #132c33;
+}
+
+
+
+.selected {
+    background-color: #ec5454;
+    color: white !important;
+}
+
+.right {
+    background-color: #72e672 !important;
+    color: white !important;
+}
+
+/* pre Loader*/
+.afterloader{
+    display: none;
+}
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px;
+    border: 5px solid transparent;
+    border-left:5px solid #00adb5;
+    animation: spinner 1.5s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
