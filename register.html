@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحيق النحو | التسجيل</title>
+    <!-- Css Font links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+   <!-- font awesome library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+   <!-- css style file -->
+   <link rel="stylesheet" href="css/register style.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+    <script src="./scripts/back/init.js"></script>
+
+</head>
+
+<body>
+    <div class="layer"></div>
+
+    <!-- The Header part  -->
+    <div class="header color">
+        <div class="container display">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/public/logo.png">
+                    </a>
+                </div> <!-- ./logo -->
+                <ul class="nav">
+                    <li> <a href="/">الصفحة الرئيسية</a></li>
+                    <li> <a href="#"> تصفح المواد</a></li>
+                    <li> <a href="#">التعلم المدرسى</a></li>
+                </ul> <!-- ./nav -->
+                <div id="adding" style="width: 45%;"></div>
+
+            </div><!-- ./container -->
+    </div><!-- ./header -->
+
+
+    <div class="form-container">
+        <div class="title">انضم لنا</div>
+        <div class="content">
+            <div action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">الاسم الأول </span>
+                        <input id="firstName" type="text" placeholder="أدخل اسمك الأول" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">اسم العائلة</span>
+                        <input id="lastName" type="text" placeholder="أدخل اسم العائلة" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">البريد الألكتروني</span>
+                        <input id="txtEmail" type="email" placeholder="أدخل بريدك الإلكتروني" title="تأكد من إدخال بريد إلكتروني سليم" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">رقم الهاتف</span>
+                        <input id="phone" type="text" placeholder="أدخل رقم هاتفك" title="تأكد من إدخال رقم هاتف سليم" required pattern="^01[0125][0-9]{8}$">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">كلمة المرور</span>
+                        <input id="txtPassword" type="password" placeholder="أدخل كلمة المرور الخاصة بك" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">تأكيد كلمة المرور</span>
+                        <input id="confirmPassword" type="password" placeholder="قم بتأكيد كلمة المرور" required>
+                        <span id='message'></span>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1" value="ذكر">
+                    <input type="radio" name="gender" id="dot-2" value="أنثى">
+                    <input type="radio" name="gender" id="dot-3" value="لم يُذكَر">
+                    <span class="gender-title">النوع</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one" ></span>
+                            <span class="gender">ذكر</span>
+                        </label>
+                        <label for="dot-2" >
+                         <span class="dot two"></span>
+                          <span class="gender">أنثى </span>
+                         </label>
+                        <label for="dot-3">
+                           <span class="dot three" ></span>
+                          <span class="gender">لا أرغب في الذكر</span>
+                         </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input id="regBtn" type="submit" value="انضم لنا">
+                    <span id='error' style="padding-right: 150px;"></span>
+                </div>
+            </div>
+        </div>
+        <a href="login.html">لديك حساب بالفعل؟ قم بتسجيل الدخول من هنا</a>
+    </div>
+    <script src="scripts/front/register.js"></script>
+</body>
+
+</html>

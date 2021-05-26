@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحيق النحو | كل ما تريد تعلمه عن النحو</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- css style link  -->
+    <link rel="stylesheet" href="css/payment.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+    <script src="./scripts/back/init.js"></script>
+
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+</head>
+<body>
+    <script src="https://js.stripe.com/v3"></script>
+
+        <div id="loader"></div>
+        <div id="go"></div>
+        <div class="afterloader">
+        <!-- The Header part  -->
+        <div class="header color">
+            <div class="container display">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="images/public/logo.png">
+                        </a>
+                    </div> <!-- ./logo -->
+                    <ul class="nav">
+                        <li> <a href="/">الصفحة الرئيسية</a></li>
+                        <li> <a href="#"> تصفح المواد</a></li>
+                        <li> <a href="#">التعلم المدرسى</a></li>
+                    </ul> <!-- ./nav -->
+                    <div id="adding" style="width: 45%;"></div>
+
+                </div><!-- ./container -->
+        </div><!-- ./header -->
+        <div class="container">
+            <h1>أنواع الاشتراكات</h1>
+        </div>
+        <div class="container display">
+            <div class="subscription">
+              <h1>الاشتراك السنوي</h1>
+              <p>يتيح لك الاشتراك السنوي ما يلي</p>
+              <div class="fit">
+                <ul id="list">
+                  <li>مشاهدة درس معين ترغب به</li>
+                  <li>الدخول في دورة تدريبية محددة</li>
+                  <li>المتابعة الدورية</li>
+                  <li>التعليق والتغذية العكسية</li>
+                </ul>
+              </div>
+              <div class="button">
+
+                <button id="subButton">الاشتراك 200LE</button>
+              </div>
+            </div>
+            <div class="subscription">
+              <h1>الاشتراك المجاني</h1>
+              <p>يتيح لك الاشتراك المجاني ما يلي</p>
+              <div class="fit">
+                <ul id="list">
+                  <li>التصفح</li>
+                  <li>البحث</li>
+                  <li>اعطاء بعض المعلومات عن الاشتراك في المحتوى</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div style="width: 5%;" class="container">
+            <a href="./">ليس الآن</a>
+        </div>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>يمكنك الدفع عن طريق</p>
+              <div style="width: 80%;display: flex;margin: auto;">
+                <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em; cursor: pointer;"
+                id="checkout-button-price_1IntfiGcjcfOhHWOq9J3i3Fw" role="link" type="button">
+                الدفع عن طريق بطاقة
+              </button>
+          
+               <div id="error-message"></div>
+          
+               <div id="paypal-button"></div>
+              </div>
+            </div>
+          
+          </div>
+        <footer class="footer margin">
+            <hr>
+            <div>
+                <ul >
+                    <h3>تواصل معنا</h3>
+                    <li><i class="fab fa-facebook-square"></i></li>
+                    <li><i class="fab fa-twitter-square"></i></li>
+                    <li><i class="fab fa-instagram-square"></i></li>
+                    <li><i class="fab fa-google-plus-square"></i></li>
+                </ul>
+
+            </div>
+            <p>جميع الحقوق محفوظة &copy; رحيق النحو</p>
+        </footer>
+        </div>
+    <script src="./scripts/back/payment.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>

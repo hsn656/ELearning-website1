@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome library -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- css style file -->
+    <link rel="stylesheet" href="css/profile-basic.css">
+    <title>رحيق النحو | كل ما تريد تعلمه عن النحو</title>
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="go"></div>
+    <div class="afterloader">
+    <!-- The Header part  -->
+    <div class="header color">
+        <div class="container display">
+                <div class="logo">
+                    <a href="/">
+                        <img id="personal" src="images/public/logo.png">
+                    </a>
+                </div> <!-- ./logo -->
+                <ul class="nav">
+                    <li> <a href="/">الصفحة الرئيسية</a></li>
+                    <li> <a href="#"> تصفح المواد</a></li>
+                    <li> <a href="#">التعلم المدرسى</a></li>
+                </ul> <!-- ./nav -->
+                <div id="adding" style="width: 45%;"></div>
+
+            </div><!-- ./container -->
+    </div><!-- ./header -->
+    
+    <!-- FIXED PART -->
+
+    <!-- basic profile inf  -->
+    <div class="profile container">
+        <div class="profile-bar">
+
+            <div id="img"> <img id="profile-img" src=""> </div>
+            <div id="profile-name"><h3>  </h3></div>
+            <ul class="profile-bar-list">
+                <li id="publicProfile" >الحساب العام</li>
+                <li id="profile" class="active">الملف الشخصي</li>
+                <li id="photo">الصورة الشخصية</li>
+                <li id="account" >الحساب</li>
+                <li id="delete">حذف الحساب</a></li>
+            </ul><!--./profile-bar-list-->
+        </div><!-- ./profile-bar -->
+
+    <!-- ----------------------------------------------------------------------------------- -->
+
+        <!-- DYNAMIC (Changed) PART -->
+        <div class=" profile-info-edit">
+
+        <!-- Profile Part ( الملف الشخصي ) -->
+        <div class="profile-basic">
+            <div class="profile-basic-header">
+                <h2>الحساب الشخصى</h2>
+                <p>أضف معلومات عن نفسك</p>
+            </div><!-- ./profile-basic-header -->
+            <div class="profile-basic-info">
+                <span>الأساسيات:</span>
+                <div class="first-name"><input type="text" name="first-name" value="" placeholder="الأسم الأول"></div>
+                <div class="last-name"><input type="text" name="last-name" value="" placeholder="الأسم الأخير"></div>
+                <div class="self-descripe">
+                    <textarea id="descripe" name="descripe" rows="5" cols="50" placeholder="صف نفسك"></textarea>
+                </div><!-- ./self-descripe -->
+            </div><!-- ./profile-basic-info-->
+
+            <div class="profile-basic-links">
+                <span>الروابط:</span>
+                <div class="twitter-link">
+                    <span>http://twitter.com/</span>
+                    <input type="text" placeholder="حساب تويتر" name="twitter-link">
+                </div><!-- ./twitter-link -->
+
+                <div class="facebook-link">
+                    <span>http://facebook.com/</span>
+                    <input type="text" placeholder="حساب فيس بوك" name="facebook-link">
+                </div><!-- ./facebook-link -->
+                
+                <div class="youtube-link">
+                    <span>http://youtube.com/</span>
+                    <input type="text" placeholder="حساب يوتيوب " name="youtube-link">
+                </div><!-- ./youtube-link -->
+
+            </div><!--./profile-basic-links-->
+            <div class="button"><button id="save-profile" class="save">حفظ </button></div>
+            
+        </div><!-- ./profile-basic -->
+
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- Edit Profile Picture (الصورة الشخصية ) -->
+        <div class="edit-photo">
+
+            <div class="edit-photo-header">
+                <h2>الصورة الشخصية</h2>
+                <p>أضف صورة جميلة لنفسك لملفك الشخصي.</p>
+            </div><!-- ./edit-photo-header --> 
+
+            <div class="image-preview">
+                <span>معاينة الصورة</span>
+                <div class="preview">
+                    <div class="img-anonymous"> <img src="images/public/anonymous.png"> </div>
+                    <div class="img-upload"> <img id="choseImg" > </div>
+                </div><!-- ./preview -->
+            </div><!-- ./image-preview -->
+
+            <div class="chose-image">
+                <span>أضف/عدل صورة:</span>
+                <div class="chose-image-btn">
+                    <input readonly id="customBtn" type="text" placeholder="لا يوجد ملف محدد">
+                    <button id="uploadImg">تحميل صورة</button>
+                </div><!-- ./chose-image-btn -->
+                <input type="file" id="file-upload"  hidden>
+            </div><!-- ./chose-image -->
+
+            <div class="button"><button id="save-photo" class="save">حفظ </button></div>
+        </div><!-- ./edit-photo -->
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- Account (الحسـاب) -->
+
+        <div class="account">
+            <div class="account-header">
+                <h2>الحساب</h2>
+                <p>قم بتغيير إعدادات حسابك وكلمة المرور الخاصة بك هنا.</p>
+            </div><!-- ./account-header --> 
+            
+            <div class="email">
+            <span>البريد الإلكتروني:</span>
+            <div class="email-edit">
+                <input type="text" id="email" readonly value="">
+                <i class="fas fa-edit" id="changeEmail"></i>
+            </div><!-- ./email-edit -->
+        </div><!-- ./email -->
+
+            <div class="password-edit">
+            <span>كلمة المرور:</span>
+            <input type="password" id="currnt-password" placeholder="إدخل كلمة السر الحالية" name="currntPassword">
+            <input type="password" id="new-password" placeholder="أدخل كلمة السر الجديدة" name="newPassword">
+            <input type="password" id="r-new-password" placeholder="أعد كتابة كلمة السر الجديدة" name="rNewPassword">
+        </div><!-- ./password-edit -->
+        <div style="top: -4.5em;" class="button"><button id="changePassword" class="save">حفظ التغييرات </button></div>
+
+    </div><!-- ./account -->
+
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <!-- close account (حذف الحساب ) -->
+        <div class="close-account">
+
+            <div class="close-account-header">
+                <h2>غلق الحساب</h2>
+                <p>أغلق حسابك بشكل دائم.</p>
+            </div><!-- ./close-account-header -->
+
+            <div class="close-account-body">
+            <span>أغلق حسابك</span>
+            <p><span class="warn">تحذير:</span> إذا أغلقت حسابك ، فسيتم إلغاء اشتراكك في جميع الدورات ، وستفقد إمكانية الوصول إلى الأبد.</p>
+            <button id="closeAcount">أغلق الحساب</button>
+        </div><!-- ./close-account-body -->
+
+        </div><!-- ./close-account -->
+
+    </div> <!-- ./profile-info-edit -->
+</div><!-- ./profile -->
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+<script src="./scripts/back/init.js"></script>
+<script src="scripts/back/profiledata.js"></script>
+<script src="scripts/back/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="keywords" content="">
+    <meta name="descrption" content="">
+    <meta charset="utf-8">
+    <title>رحيق النحو | تسجيل الدخول</title>
+    <!-- Css Font links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+   <!-- font awesome library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- css style link  -->
+    <link rel="stylesheet" href="css/login Style.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+    <script src="./scripts/back/init.js"></script>
+</head>
+
+<body>
+    <div class="layer"></div>
+    <!-- The Header part  -->
+    <div class="header   color ">
+        <div class=" container display">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/public/logo.png">
+                    </a>
+                </div> <!-- ./logo -->
+                <ul class="nav">
+                    <li> <a href="/">الصفحة الرئيسية</a></li>
+                    <li> <a href="#"> تصفح المواد</a></li>
+                    <li> <a href="#">التعلم المدرسى</a></li>
+                </ul> <!-- ./nav -->
+                <div id="adding" style="width: 45%;"></div>
+
+            </div><!-- ./container -->
+    </div><!-- ./header -->
+
+    <!-- Theform part  -->
+
+    <div class="form-container">
+        <h3 class="title">مرحبا بك </h3>
+        <div class="content">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">البريد الألكتروني</span>
+                    <input id="txtEmail" type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">كلمة المرور</span>
+                    <input id="txtPassword" type="password" placeholder="أدخل كلمة المرور الخاصة بك" required>
+                </div>
+            </div><!-- ./user-details -->
+            <div style="margin-bottom: 20px;" class="button">
+                <input id="loginBtn" type="submit" value="تسجيل الدخول">
+                <p id="error" style="text-align: center;"></p>
+            </div>
+        </div>
+        <!-- <div class="or">
+            <h2>أو</h2>
+        </div> -->
+        <div class="button-container">
+        <button id="facebookBtn" class="btn facebook"> يمكنك التسجيل من خلال فيسبوك <i class="fab fa-facebook-f"></i> </button>
+        <button id="googleBtn" class="btn gmail"> يمكنك التسجيل من خلال جوجل <i class="fab fa-google"></i> </button>
+        </div>
+        <div class="join">
+            <a href="register.html">لست مشتركا معنا؟ قم بالانضمام لنا</a>
+        </div>
+    </div>
+ 
+    <script src="scripts/front/login.js"></script>
+    
+</body>
+
+</html>

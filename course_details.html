@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title id="  ">رحيق النحو | الكورس</title>
+  <!-- Css Font links -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <!-- font awesome library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+    <script src="./scripts/back/init.js"></script>
+    <script src="./scripts/back/course_details.js"></script>
+
+  <!-- css style link  -->
+  <link rel="stylesheet" href="css/course_details.css">
+</head>
+
+<body>
+  <div id="loader"></div>
+        <div id="go"></div>
+        <div class="afterloader">
+  <!-- The Header part  -->
+  <div class="header   color ">
+    <div class=" container display">
+      <div class="logo">
+        <a href="/">
+          <img src="images/public/logo.png">
+        </a>
+      </div> <!-- ./logo -->
+      <ul class="nav">
+        <li> <a href="/">الصفحة الرئيسية</a></li>
+        <li> <a href="#"> تصفح المواد</a></li>
+        <li> <a href="#">التعلم المدرسى</a></li>
+      </ul> <!-- ./nav -->
+      <div id="adding" style="width: 45%;"></div>
+    </div><!-- ./container -->
+  </div><!-- ./header -->
+  <div class=" border ">
+
+    <!-- course overview  -->
+    <div style="padding-top: 4em;" class="course-overview container">
+      <div class="detial">
+        <p class="course-name">أسم الكورس</p>
+
+        <p class="course-brief">النحو العربي هو علم يختص بدراسة أحوال أواخر الكلمات،
+          من حيث الإعراب، والبناء، مثل أحكام إعراب الكلمات،
+          وعلامات إعرابها، والمواضع التي تأخذ فيها هذا الحكم
+          . وفي اللغة يطلق النحو على القصد، أو الجهة.</p>
+        <div class="rating">
+          <span id="rate-number"></span>
+          <ul class="rating-stars">
+            <!-- <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li> -->
+          </ul>
+        </div><!-- ./rating -->
+        <p class="attend">عدد الحضور: <span id="attendance"></span></p>
+        <p><b>مُقدم المحتوى:</b> الأستاذ حسن محمد</p>
+        <!-- <div class="buttons">
+          <button id="share">نشر <i class="fas fa-share"></i></button>
+          <button id="wish-list">أضف الي قائمة الرغبات</button>
+        </div> -->
+      </div><!-- ./detail -->
+
+      <div class="pic-desc">
+        <div class="course-img">
+          <img id="courseImg" src="images/public/img.jpeg">
+        </div>
+        <div class="price-duration">
+          <!-- <h3 id="price"><span>5</span>:السعر</h3> -->
+          <h3 id="duration"><span id="durationNumber"></span>:عدد الساعات</h3>
+        </div>
+        <!-- <button id="addToCart">أضف إلى العربة </button> -->
+      </div><!-- ./pic-desc -->
+    </div><!-- ./course-overview -->
+
+    <!-- Course Description -->
+    <div class="desc container">
+      <h3>وصف البرنامج</h3>
+      <p id="desc-text">
+        النحو العربي هو علم يختص بدراسة أحوال أواخر الكلمات،
+        من حيث الإعراب، والبناء، مثل أحكام إعراب الكلمات،
+        وعلامات إعرابها، والمواضع التي تأخذ فيها هذا الحكم
+        . وفي اللغة يطلق النحو على القصد، أو الجهة.
+        النحو العربي هو علم يختص بدراسة أحوال أواخر الكلمات،
+        من حيث الإعراب، والبناء، مثل أحكام إعراب الكلمات،
+        وعلامات إعرابها، والمواضع التي تأخذ فيها هذا الحكم
+        وفي اللغة يطلق النحو على القصد، أو الجهة.....
+      </p>
+      <!-- <a href="#">عرض أكثر</a> -->
+    </div> <!-- ./desc -->
+
+    <span class="line container"></span>
+
+    <!-- course Lessons -->
+    <div class="course-lessons container">
+      <h2>محتوى الدورة</h2>
+      <div class="lessons">
+
+      </div><!-- ./lessons -->
+    </div><!-- ./course-lessons -->
+
+    <span class="line container"></span>
+
+    <!-- comments -->
+    <!-- <div class=" course-comments container">
+      <h2>التقيمات</h2>
+
+      Load Facebook SDK for JavaScript
+      <div id="fb-root"></div>
+      <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6"></script>
+
+      Your embedded comments code
+      <div class="fb-comment-embed"
+        data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185" data-width="800">
+      </div>
+    </div>  -->
+
+  </div> <!-- ./border -->
+  <div class="footer margin">
+    <hr>
+    <div>
+        <ul >
+            <h3>تواصل معنا</h3>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fab fa-twitter-square"></i></li>
+            <li><i class="fab fa-instagram-square"></i></li>
+            <li><i class="fab fa-google-plus-square"></i></li>
+        </ul>
+
+    </div>
+    <p>جميع الحقوق محفوظة &copy; رحيق النحو</p>
+</div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="keywords" content="">
+        <meta name="descrption" content="">
+        <meta charset="utf-8">
+        <title>رحيق النحو | كل ما تريد تعلمه عن النحو</title>
+        <!-- Css Font links -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+       <!-- font awesome library -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <!-- css style link  -->
+        <link rel="stylesheet" href="css/search.css">
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+        <script src="./scripts/back/init.js"></script>
+</head>
+<body>
+       <!-- The Header part  -->
+       <div class="header color">
+        <div class="container display">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/public/logo.png">
+                    </a>
+                </div> <!-- ./logo -->
+                <ul class="nav">
+                    <li> <a href="/">الصفحة الرئيسية</a></li>
+                    <li> <a href="#"> تصفح المواد</a></li>
+                    <li> <a href="#">التعلم المدرسى</a></li>
+                </ul> <!-- ./nav -->
+                <div id="adding" style="width: 45%;"></div>
+            </div><!-- ./container -->
+    </div><!-- ./header -->
+
+   <!-- Filter -->
+    <div class="filter-bar container display margin">
+        <div class="search">
+            <input type="text" onkeypress="exec_this(event)" placeholder="ابحث عن درس.." id="search">
+        </div><!-- ./search -->
+        <div class="filter">
+            <i class="fas fa-sort-amount-down-alt"></i>
+            <button id="orderBy">رتب على حسب</button>
+            <ul class="order-list">
+                <li data-val="">الجميع</li>
+                <li data-val="date">تاريخ الانشاء</li>
+                <li data-val="">الدورس</li>
+                <!-- <li data-val="">البرامج</li> -->
+            </ul>
+        </div><!-- ./filter -->
+        <div class="number-of-results">
+            <p>نتائج البحث: <span id="search-result"></span></p>
+        </div>
+    </div><!-- ./filter-bar -->
+<hr>
+
+    <div class="trending container ">
+        <div class="trending-courses">
+        </div>
+    </div>
+
+    <div class="footer margin">
+        <hr>
+        <div>
+            <ul >
+                <h3>تواصل معنا</h3>
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-instagram-square"></i></li>
+                <li><i class="fab fa-google-plus-square"></i></li>
+            </ul>
+
+        </div>
+        <p>جميع الحقوق محفوظة &copy; رحيق النحو</p>
+    </div>
+
+
+<script src="scripts/back/search.js"></script>
+<script>
+let btn = document.getElementById("orderBy");
+let list = document.querySelectorAll(".order-list")[0];
+let a =0;
+let orderBy ;
+for(let i =1 ; i <= list.childElementCount ; i++){
+    
+    list.childNodes[i + a++].onclick= function(){
+        btn.innerHTML = this.innerHTML;
+        list.style.display = "none"
+        orderBy = this.innerHTML
+    }
+}
+
+btn.onclick = function(){
+  if(list.style.display == "block")
+  list.style.display = "none";
+  else{
+    list.style.display = "block";
+    
+  }};
+
+</script>
+<script>
+    (function () {
+        if(decodeURI(location.search.split('=')[1])!=="undefined")
+            document.getElementById("search").value = decodeURI(location.search.split('=')[1])
+        else
+            document.getElementById("search").value =""
+        test_me(decodeURI(location.search.split('=')[1])!=="undefined"?decodeURI(location.search.split('=')[1]):"")
+    })()
+    function exec_this(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementsByClassName("trending-courses")[0].innerHTML=""
+            test_me(event.target.value, orderBy);
+            document.getElementById("search-result").innerHTML = document.querySelector(".trending-courses").childElementCount;
+
+        }
+    }
+    
+</script>
+</body>
+</html>

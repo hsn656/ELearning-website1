@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome library -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- css style file -->
+    <link rel="stylesheet" href="css/lesson Style.css">
+    <link rel="stylesheet" href="css/video Style.css">
+    <title>رحيق النحو | كل ما تريد تعلمه عن النحو</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+    <script src="./scripts/back/init.js"></script>
+    <style>
+        #commentMessage{
+            width: 30%;
+            height: 2.5em;
+            padding: .5em;
+            border-radius: 3px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="go"></div>
+    <div class="afterloader">
+    <!-- The Header part  -->
+    <div class="header color">
+        <div class="container display">
+                <div class="logo">
+                    <a href="/">
+                        <img id="personal" src="images/public/logo.png">
+                    </a>
+                </div> <!-- ./logo -->
+                <ul class="nav">
+                    <li> <a href="/">الصفحة الرئيسية</a></li>
+                    <li> <a href="#"> تصفح المواد</a></li>
+                    <li> <a href="#">التعلم المدرسى</a></li>
+                </ul> <!-- ./nav -->
+                <div id="adding" style="width: 45%;"></div>
+
+            </div><!-- ./container -->
+    </div><!-- ./header -->
+    
+    <div style="padding-top: 6em;" class="lesson-body">
+
+
+        <!-- lesson list -->
+        <div class="lessons-list">
+            
+            <!-- ./lesson-list-header-->
+            <!-- <div style="cursor: pointer;" class="lessons-content">
+                <div class="show-lessons">
+                    <button class="show-lessons-Btn">اسم الدرس</button>
+                    <input style="margin-left: 1em;" disabled id="chekbox" type="checkbox">
+                </div>
+            </div> -->
+            <!-- ./lessons-content -->
+        </div>
+        <!-- ./lesson-list -->
+        <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+        <!-- leeson section -->
+        <div class="lesson-section">
+            <div class="lesson-video">
+                <h2 class="lesson-title"></h2>
+                <p>هذا الفيديو تابع <a id="courseName" href="#"></a></p>
+                <div class="video-container">
+                    <div id="myvideos" class="videos">
+                        <div id="videoBody" class="video-body"></div>
+                        <div id="contolBox" class="video-control">
+                            <span id="vDuration">00:00:00</span>
+                            <span id="vPlay"><i class="fa fa-play" ></i></span>
+                            <span id="vPause"><i class="fa fa-pause" ></i></span>
+
+                            <input id="progressBar" type="range" min="1" max="100">
+                            <span id="vMute"><i class="fa fa-volume-off" ></i></span>
+                            <span id="vUnmute"><i class="fa fa-volume-up" ></i></span>
+                            <span class="settings-box"><i id="settingsBox" class=" fa fa-cog" >      </i>
+                        <div id="settings" class="settings hide" >
+                            
+                            
+                    <select name="speed" id="speed">
+                                <option value="1" selected >1</option>
+                                <option value="1.25" selected >1.25</option>
+                                <option value="1.5" >1.5</option>
+                                <option value="1.75" >1.75</option>
+                                <option value="2" >2</option>
+                            </select>
+                            <span>سرعة التشغيل</span>
+                        </div>
+                        </span>
+                        <span id="vNormalScreen"><i class="fa fa-compress" ></i></span>
+                        <span id="vFullScreen"><i class="fa fa-expand " ></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ./overview-comments -->
+        <!-- overview  -->
+
+        <!-- comments -->
+        <div style="border: 2px solid; padding: 1em; margin-top: 3em;" class="comments">
+            <h2>التعليقات</h2>
+            <div id="comments">
+                <!-- <div style="display: flex;" class="comment">
+                    <img src="./images/public/profile.png" style="width: 4%;height: 30%;" alt="">
+                    <h4 style="margin: 0.5em;">محمد محمد</h4>
+                    <p style="margin: 0.5em;">بيلا للاف ى</p>
+                </div> -->
+
+            </div>
+            <input onkeypress="sendComment(event)" type="text" id="commentMessage" placeholder="اكتب تعليقك ثم اضغط على زر enter">
+
+        </div>
+        <!-- ./comments -->
+    </div>
+    <!-- ./lesson-section -->
+    </div>
+    <div class="footer margin">
+        <hr>
+        <div>
+            <ul>
+                <h3>تواصل معنا</h3>
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-instagram-square"></i></li>
+                <li><i class="fab fa-google-plus-square"></i></li>
+            </ul>
+
+        </div>
+        <p>جميع الحقوق محفوظة &copy; رحيق النحو</p>
+    </div>
+    </div>
+    <script src="./scripts/back/lesson.js"></script>
+
+    <script src="./scripts/back/video.js"></script>
+<script>
+    function sendComment(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            sendData(event.target.value);
+            // document.getElementById("search-result").innerHTML = document.querySelector(".trending-courses").childElementCount;
+
+        }
+    }
+</script>
+</body>
+</html>
